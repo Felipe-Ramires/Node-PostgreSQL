@@ -1,0 +1,30 @@
+POST http://localhost:3333/reserva
+Content-Type: application/json
+
+{
+    "hotel": "Royalplace 1",
+    "quarto": "Deluxe",
+    "valor": 600
+}
+
+###
+//Retorna todas as reservas
+GET  http://localhost:3333/reserva
+
+//get com Query Parameters
+//GET  http://localhost:3333/reserva?search=Standard
+
+###
+
+PUT http://localhost:3333/reserva/
+Content-Type: application/json
+
+{
+    "hotel": "Royalplace 2",
+    "quarto": "Standard 1",
+    "valor": 600
+}
+
+###
+
+DELETE http://localhost:3333/reserva/763f17fa-9261-4ab2-bfea-8c08a3dc734d
