@@ -1,7 +1,16 @@
 import { fastify } from 'fastify'
 import { DatabasePostgres } from './database-postgres.js'
+import fastifyCors from '@fastify/cors' 
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const server = fastify()
+
+server.register(fastifyCors, {
+  origin: true, 
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
+})
 
 const database = new DatabasePostgres()
 
@@ -47,5 +56,12 @@ server.delete('/reserva/:id', async (request, reply) => {
 })
 
 server.listen({
+  host: '0.0.0.0', // Importante para acessar de outras redes
   port: 3333,
+}, (err, address) => {
+  if (err) {
+    console.error(err)
+    process.exit(1)
+  }
+  console.log(`Servidor rodando em ${address}`)
 })

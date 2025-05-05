@@ -2,7 +2,7 @@ POST http://localhost:3333/reserva
 Content-Type: application/json
 
 {
-    "hotel": "Royalplace 1",
+    "hotel": "Royalplace TESTE",
     "quarto": "Deluxe",
     "valor": 600
 }
@@ -16,15 +16,15 @@ GET  http://localhost:3333/reserva
 
 ###
 
-PUT http://localhost:3333/reserva/
+PUT http://localhost:3333/reserva/fb6a3bd7-b95d-4448-9831-3275f040c061
 Content-Type: application/json
 
 {
-    "hotel": "Royalplace 2",
-    "quarto": "Standard 1",
-    "valor": 600
+    "hotel": "Royalplace",
+    "quarto": "Standard",
+    "valor": 24
 }
 
 ###
 
-DELETE http://localhost:3333/reserva/763f17fa-9261-4ab2-bfea-8c08a3dc734d
+DELETE http://localhost:3333/reserva/70bacaf7-d427-4393-a751-481995a84dd9

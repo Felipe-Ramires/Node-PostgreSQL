@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Reservas</h1>
+        
+        <form id="reservaForm">
+            <input type="hidden" id="reservaId">
+            
+            <div class="form-group">
+                <label for="hotel">Hotel:</label>
+                <input type="text" id="hotel" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="quarto">Quarto:</label>
+                <input type="text" id="quarto" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" step="0.01" required>
+            </div>
+            
+            <div class="buttons">
+                <button type="submit" id="salvarBtn">Salvar</button>
+                <button type="button" id="limparBtn">Limpar</button>
+            </div>
+        </form>
+        
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Buscar por quarto...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+        
+        <h2>Lista de Reservas</h2>
+        <div id="reservasList"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
